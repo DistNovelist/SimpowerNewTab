@@ -20,19 +20,15 @@ SimpowerNewTabは、新しいタブを便利にカスタマイズできる軽量
 2. **New Tab Redirectの設定**  
    新しいタブでSimpowerNewTabを表示するには、以下の手順で設定を行ってください。
 
-   - **Chromeの場合**:
-     1. [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/ejdcnefgbfgcbhdklnfciicdoclmkfkc)をインストールします。
+   - **Chrome、Edgeの場合**:
+     1. [New Tab Redirect](https://chromewebstore.google.com/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna?hl=ja)をインストールします。
      2. 拡張機能の設定画面を開き、リダイレクト先に以下のURLを入力します。  
         ```
         https://distnovelist.github.io/SimpowerNewTab/
         ```
      3. 設定を保存します。
 
-   - **Edgeの場合**:
-     1. Chromeウェブストアから[New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/ejdcnefgbfgcbhdklnfciicdoclmkfkc)をインストールします。
-     2. 上記と同様にリダイレクト先を設定します。
-
-   - **Firefoxの場合**:
+   - **Firefoxの場合(未確認)**:
      1. [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/)をインストールします。
      2. 拡張機能の設定画面でリダイレクト先を設定します。
 
