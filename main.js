@@ -10,9 +10,7 @@ document.addEventListener("alpine:init", () => {
             showNote: true, 
             showToDo: true, 
             showLinks: true, 
-            searchEngine: "https://www.google.com/search?q=", 
-            bgColor: "#ffffff", 
-            bgImage: "", 
+            searchEngine: "https://www.google.com/search?q=",
             theme: "light"
         },
         init() { 
@@ -61,10 +59,6 @@ document.addEventListener("alpine:init", () => {
         },
         applyTheme() {
             document.documentElement.setAttribute("data-theme", this.settings.theme);
-            document.body.style.backgroundColor = this.settings.bgColor;
-            document.body.style.backgroundImage = this.settings.bgImage ? `url(${this.settings.bgImage})` : "none";
-            document.body.style.backgroundSize = "cover";
-            document.body.style.backgroundRepeat = "no-repeat";
         },
         initSortable() {
             // LinksのSortable初期化

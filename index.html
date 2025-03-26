@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body x-data="newTabApp" x-init="init" :style="{ background: settings.bgImage ? `url(${settings.bgImage}) center/cover no-repeat` : settings.bgColor }" class="min-h-screen flex flex-col">
+<body x-data="newTabApp" x-init="init" class="min-h-screen flex flex-col">
     
     <div class="p-4">
         <input type="text" x-model="searchQuery" @keyup.enter="search" placeholder="検索..." class="input input-bordered w-full" />
@@ -99,13 +99,13 @@
                 <span class="label-text">Links 表示</span>
                 <input type="checkbox" x-model="settings.showLinks" @change="saveSettings" class="toggle">
             </label>
-            <label class="label">検索エンジン</label>
+            <p><label class="label">検索エンジン</label></p>
             <select x-model="settings.searchEngine" @change="saveSettings" class="select select-bordered w-full">
                 <option value="https://www.google.com/search?q=">Google</option>
                 <option value="https://www.bing.com/search?q=">Bing</option>
                 <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
             </select>
-            <label class="label">テーマ選択</label>
+            <p><label class="label">テーマ選択</label></p>
             <select x-model="settings.theme" @change="saveSettings" class="select select-bordered w-full">
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
@@ -143,17 +143,6 @@
                 <option value="abyss">Abyss</option>
                 <option value="silk">Silk</option>
             </select>
-            <label class="label">背景色</label>
-            <select x-model="settings.bgColor" @change="saveSettings" class="select select-bordered w-full">
-                <option value="bg-primary">Primary</option>
-                <option value="bg-secondary">Secondary</option>
-                <option value="bg-accent">Accent</option>
-                <option value="bg-neutral">Neutral</option>
-                <option value="custom">カスタム</option>
-            </select>
-            <input type="color" x-show="settings.bgColorOption === 'custom'" x-model="settings.bgColor" @input="saveSettings" class="input input-bordered w-full mt-2">
-            <label class="label">背景画像URL</label>
-            <input type="text" x-model="settings.bgImage" @input="saveSettings" class="input input-bordered w-full">
         </div>
         <form method="dialog" class="modal-backdrop">
           <button>close</button>
