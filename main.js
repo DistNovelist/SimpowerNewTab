@@ -17,6 +17,9 @@ document.addEventListener("alpine:init", () => {
             window.addEventListener("storage", () => { this.loadData(); });
             this.applyTheme();
             this.initSortable();
+            this.$nextTick(() => {
+                this.$refs.searchInput.focus(); // 検索窓にフォーカスを設定
+            });
         },
         search() { window.location.href = this.settings.searchEngine + encodeURIComponent(this.searchQuery); },
         saveNote() { localStorage.setItem("note", this.note); },

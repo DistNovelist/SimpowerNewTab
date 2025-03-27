@@ -14,7 +14,14 @@
 <body x-data="newTabApp" x-init="init" class="min-h-screen flex flex-col">
     
     <div class="p-4">
-        <input type="text" x-model="searchQuery" @keyup.enter="search" placeholder="検索..." class="input input-bordered w-full" />
+        <input 
+            type="text" 
+            x-model="searchQuery" 
+            x-ref="searchInput" 
+            @keyup.enter="search" 
+            placeholder="検索..." 
+            class="input input-bordered w-full" 
+        />
     </div>
     
     <div class="flex flex-col md:flex-row gap-4 p-4 flex-1">
