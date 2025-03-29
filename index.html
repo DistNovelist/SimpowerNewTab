@@ -60,10 +60,12 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 10h16M4 14h16" />
                             </svg>
                         </span>
-                        <!-- Favicon -->
-                        <img :src="`https://www.google.com/s2/favicons?sz=32&domain_url=${link.url}`" alt="favicon" class="w-6 h-6">
-                        <!-- リンクテキスト -->
-                        <a :href="link.url" class="link no-underline flex-1" x-text="link.text"></a>
+                        <a :href="link.url" class="flex items-center gap-2 w-full">
+                            <!-- Favicon -->
+                            <img :src="`https://www.google.com/s2/favicons?sz=32&domain_url=${link.url}`" alt="favicon" class="w-6 h-6">
+                            <!-- リンクテキスト -->
+                            <span class="link no-underline flex-1 truncate" x-text="link.text"></span>
+                        </a>
                         <!-- 編集ボタン -->
                         <button @click="editLink(index)" class="btn btn-sm btn-warning">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 64 64">
