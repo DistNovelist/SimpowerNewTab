@@ -152,12 +152,22 @@
                 <option value="abyss">Abyss</option>
                 <option value="silk">Silk</option>
             </select>
+            <p>設定の書き出し・読み込み</p>
+            <p>
+            <button @click="exportData" class="btn btn-primary w-full">データをエクスポート</button>
+            </p>
+            <p>
+                <label class="label">データをインポート</label>
+                <input type="file" @change="importData" class="file-input" />
+            </p>
         </div>
         <form method="dialog" class="modal-backdrop">
-          <button>close</button>
+            <button>close</button>
         </form>
     </dialog>
-    
+
+
+    <script src="storageHandler.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

@@ -134,6 +134,15 @@ document.addEventListener("alpine:init", () => {
                     });
                 }
             });
+        },
+        exportData() {
+            StorageHandler.exportToJSON();
+        },
+        importData(event) {
+            const file = event.target.files[0];
+            if (file) {
+                StorageHandler.importFromJSON(file);
+            }
         }
     }));
 });
